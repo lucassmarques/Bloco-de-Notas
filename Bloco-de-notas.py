@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-sg.ChangeLookAndFeel("Dark")  # Mudança do Tema
+sg.ChangeLookAndFeel("reddit") 
 
 WIN_W = 90
 WIN_H = 25
@@ -14,7 +14,7 @@ sg.Text()
 menu_layout = (
     ["Arquivo", [file_new, file_open, file_save, "Salvar como", "---", "Sair"]],
     ["Editar", ["Tornar caixa alta", "Tornar caixa baixa"]],
-    ["Ajuda", ["Como criar minhhas próprias interfaces?", "Autores"]],
+   
 )
 
 layout = [
@@ -89,20 +89,6 @@ def tornar_caixa_alta():
     window["_BODY_"].update(value=str(values["_BODY_"]).upper())
 
 
-def exibir_autores():
-    sg.PopupNoTitlebar(
-        """
-        Eder Cruz ->youtube.com/channel/UCz1ipXWkAYjcS4jie_IKs6g.
-        Jhonatan de Souza -> youtube.com/devaprender
-        """
-    )
-
-
-def exibir_link_video():
-    sg.PopupOK(
-        """Aprenda como criar interfaces acessando este link: b.link/youtubetutorial"""
-    )
-
 
 while True:
     event, values = window.read()
@@ -122,10 +108,7 @@ while True:
         tornar_caixa_alta()
     if event == "Tornar caixa baixa":
         tornar_caixa_baixa()
-    if event == "Como criar minhhas próprias interfaces?":
-        exibir_link_video()
-    if event == "Autores":
-        exibir_autores()
+   
 
 Notepad = Notepad()
 Notepad.Iniciar()
