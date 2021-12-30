@@ -21,7 +21,7 @@ layout = [
     [sg.MenuBar(menu_layout)],
     [
         sg.Multiline(
-            font=("Consolas", 12), text_color="white", size=(WIN_W, WIN_H), key="_BODY_"
+            font=("Consolas", 12), text_color="black", size=(WIN_W, WIN_H), key="_BODY_"
         )
     ],
 ]
